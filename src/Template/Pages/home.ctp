@@ -132,7 +132,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 					<li> 
 						<?php if(empty($this->request->Session()->read('Auth.User'))): ?>
 							Welcome!
-							<a href='/users/login'>Login here</a></li>
+							<a href='/users/login'>Login here</a> Or Create a new User <a href="/users/add"> here </a>.
+							For new user creation just set the 'MFA Email' same email address you registered with on Acceptto mobile app.
+						</li>
 						<?php else: ?>
 							Welcome <?= $this->request->Session()->read('Auth.User')["username"] ?>!
 							|

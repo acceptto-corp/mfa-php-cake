@@ -9,18 +9,22 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 
 ## Installation
 
-1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
-
-If Composer is installed globally, run
-```bash
-composer create-project --prefer-dist cakephp/app [app_name]
-```
-
-You should now be able to visit the path to where you installed the app and see
-the setup traffic lights.
+Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
 
 ## Configuration
 
-Read and edit `config/app.php` and setup the 'Datasources' and any other
-configuration relevant for your application.
+Create `config/app.php` and setup the 'Datasources' and any other
+configuration relevant for your application according to app.default.php
+
+## Creating Database Schema
+
+You can use the script in `config/schema/users.sql` to create the `Users` table which will be used for authentication.
+
+
+## Acceptto
+
+Integration is done using Acceptto MFA Rest API Guide [Acceptto REST](https://www.acceptto.com/docs/general_api)
+
+## Running Application
+
+Just go to the command line and run `bin/cake server` from directory of project. It will run a development web server for test at `http://localhost:8765/`
